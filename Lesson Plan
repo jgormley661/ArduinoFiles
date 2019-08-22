@@ -1,0 +1,26 @@
+1. Construct the simplest circuit(see images)
+    REMEMBER, LEDs are DIODES, meaning they only allow current to flow in one direction.
+        * The -/ground/cathode leg has a larger end inside of the LED and the leg itself is usually longer.
+        * The +/positive/anode has a muchsmaller end inside the LED and the leg itself is usually shorter.
+        
+1b. Explaining the principles of electricity
+    Electricity has many analogs to water.  The Power Supply = the water pump. The water will fill all the space it is given.
+    It will the easiest route. If the circuit is broke, all the water will leak out. etc.
+        
+    REMEMBER an LED must always be protected by a CURRENT-LIMITING Resistor or it will draw maximum current and destroy itself.
+        * A resistor can go before OR after the LED and will still protect it.
+        * Resistor are non-directional so cannot be the wrong way around.
+        
+2. Add a Switch to simplest circuit(see images)
+    PROBLEM: The schematic and BB views have an error. There are floating connections (connections that do not form a circuit) on the
+             unused terminals of the push button. Floating connections may cause detrimental problems to digital circuits, creating
+             a 1/on when a 0/off is intended, etc. 
+
+3. Create a circuit to test digital pins(see images and code Strobe Effect Code)
+    WARNING: Pins 0,1 and 13 can have problems, I recommend not using them. 
+    
+4. Digital toggle(see images and code)
+    * Again, the switches do have floating connections. This should be fine though it COULD cause floating connection disturbances.
+    * The schematic view may be a little confusing but shows quite clearly how all components connected to ground are electrically
+      connected to eachtother.
+    
