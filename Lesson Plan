@@ -23,4 +23,9 @@
     * Again, the switches do have floating connections. This should be fine though it COULD cause floating connection disturbances.
     * The schematic view may be a little confusing but shows quite clearly how all components connected to ground are electrically
       connected to eachtother.
+
+5. Camera Flash
+    * The capacitor can be changed to a variable value to have different lengths
+    * When the arduino's power is cut off (by button or switch), the capcitor will discharge
+      and act as a battery for the resistor and led for a small amonut of time. Very good, very cool.
     
