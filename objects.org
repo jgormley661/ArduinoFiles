@@ -7,13 +7,13 @@
 ** We will be making a bouncing ball program, a ball that bounces around the screen like an old screensaver
 
 ** Step 1. Add basic functions
-void setup(){
-  size(500, 500);
-  background(255);
-}
+void setup(){ {{{NEWLINE}}} 
+  size(500, 500); {{{NEWLINE}}} 
+  background(255); {{{NEWLINE}}}  
+} {{{NEWLINE}}} 
 
-void draw(){
-}
+void draw(){  {{{NEWLINE}}} 
+}{{{NEWLINE}}} 
 
 ** Step 2. Add the class
 *** Add this class to the top of your page(before setup). Make it a capital B for Ball so we can tell that all capitalised things are classes.
