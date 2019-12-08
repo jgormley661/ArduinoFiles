@@ -4,8 +4,7 @@
 - We are better at thinking in terms of objects than in what the computer does
 - We want our code organised.
 
-** We will be making a bouncing ball program, a ball that bounces around the screen like
-** an old screensaver
+** We will be making a bouncing ball program, a ball that bounces around the screen like an old screensaver
 
 ** Step 1. Add basic functions
 void setup(){
@@ -17,8 +16,7 @@ void draw(){
 }
 
 ** Step 2. Add the class
-*** Add this class to the top of your page(before setup)
-*** Make it a capital B for Ball so we can tell that all capitalised things are classes.
+*** Add this class to the top of your page(before setup). Make it a capital B for Ball so we can tell that all capitalised things are classes.
 
 class Ball{
 }
