@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-12-08 Sun 09:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org63f38a3">1. Objects and Classes</a>
+<ul>
+<li><a href="#org1ae5aa4">1.1. Why use classes</a></li>
+<li><a href="#org854e71b">1.2. We will be making a bouncing ball program, a ball that bounces around the screen like</a></li>
+<li><a href="#org5ecc4a0">1.3. an old screensaver</a></li>
+<li><a href="#org609060e">1.4. Step 1. Add basic functions</a></li>
+<li><a href="#orga3ea701">1.5. Step 2. Add the class</a>
+<ul>
+<li><a href="#org9f982fd">1.5.1. Add this class to the top of your page(before setup)</a></li>
+<li><a href="#orgf91b0bb">1.5.2. Make it a capital B for Ball so we can tell that all capitalised things are classes.</a></li>
+<li><a href="#org8220e69">1.5.3. The class is the INSTRUCTIONS we give to make the ball, not the ball itself.</a></li>
+<li><a href="#orgb3e6bf0">1.5.4. Each ball will be an OBJECT</a></li>
+</ul>
+</li>
+<li><a href="#org808aaab">1.6. Step 3. Give your class some data.</a>
+<ul>
+<li><a href="#orgbbf69f5">1.6.1. Let's think OBJECTIVELY. When designing a class to build objects, our first step is thinking about</a></li>
+<li><a href="#org420db93">1.6.2. what the object HAS.</a></li>
+<li><a href="#orgaff7d10">1.6.3. These are usually things that can be counted or measured.</a></li>
+<li><a href="#orgdb0e66e">1.6.4. A real ball in the real world  HAS a position, it HAS a colour, etc.</a></li>
+<li><a href="#org92bddeb">1.6.5. Start with adding a few.</a></li>
+</ul>
+</li>
+<li><a href="#orgc1d00ec">1.7. Step 4. Consructor</a>
+<ul>
+<li><a href="#orgfccd719">1.7.1. Let's add a nice way of creating balls by adding a constructor. This will allow us to give</a></li>
+<li><a href="#org9884924">1.7.2. Each and every ball we create a different size, position, whatever we want!</a></li>
+<li><a href="#org4df5f3e">1.7.3. NOTICE! All the data we gave the class (x, y, size) can be set to something different</a></li>
+<li><a href="#org8af06bc">1.7.4. by the constructor.</a></li>
+</ul>
+</li>
+<li><a href="#orga301ba9">1.8. step 4. Give your class some functionality</a>
+<ul>
+<li><a href="#orgb7c0ff1">1.8.1. Now let's think about what an object DOES. A ball bounces, it moves, it HURTS when it hits you.</a></li>
+<li><a href="#orgb88d428">1.8.2. Converting this information to code is easy with classes! Let's make the ball just show up first.</a></li>
+</ul>
+</li>
+<li><a href="#org83a9bd1">1.9. Step 5. Use the class to create objects</a>
+<ul>
+<li><a href="#org7a64df2">1.9.1. After the class, add some balls. These are NOT inside a function or inside the class.</a></li>
+<li><a href="#orgb05ec7b">1.9.2. This tells the computer "Make Some room, I'm going to be making objects!"</a></li>
+</ul>
+</li>
+<li><a href="#orgce18896">1.10. Step 6. Modify Setup</a>
+<ul>
+<li><a href="#orgc9d7eed">1.10.1. we now use the CONSTRUCTOR we designed earlier to create the balls, we can give them all</a></li>
+<li><a href="#org7543eb8">1.10.2. Their own positions and sizes.</a></li>
+</ul>
+</li>
+<li><a href="#orgfb8937c">1.11. Step 7. modify draw</a>
+<ul>
+<li><a href="#org9696d99">1.11.1. Remember we gave the ball a display function. We can now call that and display each one.</a></li>
+<li><a href="#org2a7567b">1.11.2. In the next step we will really see the benefit of using this style of coding.</a></li>
+</ul>
+</li>
+<li><a href="#orgc122bb5">1.12. Step 8. Give the balls more data</a></li>
+<li><a href="#org3c31aee">1.13. step 9. Give the balls another function they can perform and add speed to constructor</a>
+<ul>
+<li><a href="#orgc2578bc">1.13.1. makes sure to give each ball a speed variable in the "new ball" part of setup();</a></li>
+</ul>
+</li>
+<li><a href="#orgfcd15ad">1.14. step 10. adding more functionality</a>
+<ul>
+<li><a href="#org20d9a41">1.14.1. We now have a program that we can modify very easily by changing the variables in the</a></li>
+<li><a href="#org0c6be1e">1.14.2. void setup() function. try and change speeds and sizes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org63f38a3" class="outline-2">
+<h2 id="org63f38a3"><span class="section-number-2">1</span> Objects and Classes</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org1ae5aa4" class="outline-3">
+<h3 id="org1ae5aa4"><span class="section-number-3">1.1</span> Why use classes</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>We want to reuse as much code as possible<br /></li>
+<li>We are better at thinking in terms of objects than in what the computer does<br /></li>
+<li>We want our code organised.<br /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org854e71b" class="outline-3">
+<h3 id="org854e71b"><span class="section-number-3">1.2</span> We will be making a bouncing ball program, a ball that bounces around the screen like</h3>
+</div>
+<div id="outline-container-org5ecc4a0" class="outline-3">
+<h3 id="org5ecc4a0"><span class="section-number-3">1.3</span> an old screensaver</h3>
+</div>
+
+<div id="outline-container-org609060e" class="outline-3">
+<h3 id="org609060e"><span class="section-number-3">1.4</span> Step 1. Add basic functions</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+void setup(){<br />
+  size(500, 500);<br />
+  background(255);<br />
+}<br />
+</p>
+
+<p>
+void draw(){<br />
+}<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3ea701" class="outline-3">
+<h3 id="orga3ea701"><span class="section-number-3">1.5</span> Step 2. Add the class</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-org9f982fd" class="outline-4">
+<h4 id="org9f982fd"><span class="section-number-4">1.5.1</span> Add this class to the top of your page(before setup)</h4>
+</div>
+<div id="outline-container-orgf91b0bb" class="outline-4">
+<h4 id="orgf91b0bb"><span class="section-number-4">1.5.2</span> Make it a capital B for Ball so we can tell that all capitalised things are classes.</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<p>
+class Ball{<br />
+}<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8220e69" class="outline-4">
+<h4 id="org8220e69"><span class="section-number-4">1.5.3</span> The class is the INSTRUCTIONS we give to make the ball, not the ball itself.</h4>
+</div>
+<div id="outline-container-orgb3e6bf0" class="outline-4">
+<h4 id="orgb3e6bf0"><span class="section-number-4">1.5.4</span> Each ball will be an OBJECT</h4>
+</div>
+</div>
+
+<div id="outline-container-org808aaab" class="outline-3">
+<h3 id="org808aaab"><span class="section-number-3">1.6</span> Step 3. Give your class some data.</h3>
+<div class="outline-text-3" id="text-1-6">
+</div>
+<div id="outline-container-orgbbf69f5" class="outline-4">
+<h4 id="orgbbf69f5"><span class="section-number-4">1.6.1</span> Let's think OBJECTIVELY. When designing a class to build objects, our first step is thinking about</h4>
+</div>
+<div id="outline-container-org420db93" class="outline-4">
+<h4 id="org420db93"><span class="section-number-4">1.6.2</span> what the object HAS.</h4>
+</div>
+<div id="outline-container-orgaff7d10" class="outline-4">
+<h4 id="orgaff7d10"><span class="section-number-4">1.6.3</span> These are usually things that can be counted or measured.</h4>
+</div>
+<div id="outline-container-orgdb0e66e" class="outline-4">
+<h4 id="orgdb0e66e"><span class="section-number-4">1.6.4</span> A real ball in the real world  HAS a position, it HAS a colour, etc.</h4>
+</div>
+<div id="outline-container-org92bddeb" class="outline-4">
+<h4 id="org92bddeb"><span class="section-number-4">1.6.5</span> Start with adding a few.</h4>
+<div class="outline-text-4" id="text-1-6-5">
+<p>
+class Ball{<br />
+  int x;<br />
+  int y;<br />
+  int size;<br />
+}<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc1d00ec" class="outline-3">
+<h3 id="orgc1d00ec"><span class="section-number-3">1.7</span> Step 4. Consructor</h3>
+<div class="outline-text-3" id="text-1-7">
+</div>
+<div id="outline-container-orgfccd719" class="outline-4">
+<h4 id="orgfccd719"><span class="section-number-4">1.7.1</span> Let's add a nice way of creating balls by adding a constructor. This will allow us to give</h4>
+</div>
+<div id="outline-container-org9884924" class="outline-4">
+<h4 id="org9884924"><span class="section-number-4">1.7.2</span> Each and every ball we create a different size, position, whatever we want!</h4>
+<div class="outline-text-4" id="text-1-7-2">
+<p>
+class Ball{<br />
+  int x;<br />
+  int y;<br />
+  int size;<br />
+</p>
+
+<p>
+  Ball(int px, int py, int psize){<br />
+    this.x = px;<br />
+    this.y = py;<br />
+    this.size = psize;<br />
+  }<br />
+}<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4df5f3e" class="outline-4">
+<h4 id="org4df5f3e"><span class="section-number-4">1.7.3</span> NOTICE! All the data we gave the class (x, y, size) can be set to something different</h4>
+</div>
+<div id="outline-container-org8af06bc" class="outline-4">
+<h4 id="org8af06bc"><span class="section-number-4">1.7.4</span> by the constructor.</h4>
+</div>
+</div>
+
+<div id="outline-container-orga301ba9" class="outline-3">
+<h3 id="orga301ba9"><span class="section-number-3">1.8</span> step 4. Give your class some functionality</h3>
+<div class="outline-text-3" id="text-1-8">
+</div>
+<div id="outline-container-orgb7c0ff1" class="outline-4">
+<h4 id="orgb7c0ff1"><span class="section-number-4">1.8.1</span> Now let's think about what an object DOES. A ball bounces, it moves, it HURTS when it hits you.</h4>
+</div>
+<div id="outline-container-orgb88d428" class="outline-4">
+<h4 id="orgb88d428"><span class="section-number-4">1.8.2</span> Converting this information to code is easy with classes! Let's make the ball just show up first.</h4>
+<div class="outline-text-4" id="text-1-8-2">
+<p>
+class Ball{<br />
+  int x;<br />
+  int y;<br />
+  int size;<br />
+</p>
+
+<p>
+Ball(int px, int py, int psize){<br />
+  this.x = px;<br />
+  this.y = py;<br />
+  this.size = psize;<br />
+}<br />
+</p>
+
+<p>
+  void display(){<br />
+    circle(x, y, size);<br />
+  }<br />
+}<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org83a9bd1" class="outline-3">
+<h3 id="org83a9bd1"><span class="section-number-3">1.9</span> Step 5. Use the class to create objects</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+class Ball{<br />
+  int x;<br />
+  int y;<br />
+  int size;<br />
+</p>
+
+<p>
+Ball(int x, int y, int size){<br />
+  this.x = x;<br />
+  this.y = y;<br />
+  this.size = size;<br />
+}<br />
+</p>
+
+<p>
+  void display(){<br />
+    circle(x, y, size);<br />
+  }<br />
+}<br />
+</p>
+
+<p>
+//Adding balls here<br />
+Ball b1;<br />
+Ball b2;<br />
+Ball b3;<br />
+</p>
+</div>
+
+<div id="outline-container-org7a64df2" class="outline-4">
+<h4 id="org7a64df2"><span class="section-number-4">1.9.1</span> After the class, add some balls. These are NOT inside a function or inside the class.</h4>
+</div>
+<div id="outline-container-orgb05ec7b" class="outline-4">
+<h4 id="orgb05ec7b"><span class="section-number-4">1.9.2</span> This tells the computer "Make Some room, I'm going to be making objects!"</h4>
+</div>
+</div>
+
+
+<div id="outline-container-orgce18896" class="outline-3">
+<h3 id="orgce18896"><span class="section-number-3">1.10</span> Step 6. Modify Setup</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+void setup(){<br />
+  size(500,500);<br />
+  background(255);<br />
+</p>
+
+<p>
+  //Setting the ball objects<br />
+  b1 = new Ball(50,50,50);<br />
+  b2 = new Ball(60,60,60);<br />
+  b3 = new Ball(70,70,70);<br />
+}<br />
+</p>
+</div>
+
+<div id="outline-container-orgc9d7eed" class="outline-4">
+<h4 id="orgc9d7eed"><span class="section-number-4">1.10.1</span> we now use the CONSTRUCTOR we designed earlier to create the balls, we can give them all</h4>
+</div>
+<div id="outline-container-org7543eb8" class="outline-4">
+<h4 id="org7543eb8"><span class="section-number-4">1.10.2</span> Their own positions and sizes.</h4>
+</div>
+</div>
+
+<div id="outline-container-orgfb8937c" class="outline-3">
+<h3 id="orgfb8937c"><span class="section-number-3">1.11</span> Step 7. modify draw</h3>
+<div class="outline-text-3" id="text-1-11">
+<p>
+void draw(){<br />
+  b1.display();<br />
+  b2.display();<br />
+  b3.display();<br />
+}<br />
+</p>
+</div>
+
+<div id="outline-container-org9696d99" class="outline-4">
+<h4 id="org9696d99"><span class="section-number-4">1.11.1</span> Remember we gave the ball a display function. We can now call that and display each one.</h4>
+</div>
+<div id="outline-container-org2a7567b" class="outline-4">
+<h4 id="org2a7567b"><span class="section-number-4">1.11.2</span> In the next step we will really see the benefit of using this style of coding.</h4>
+</div>
+</div>
+
+<div id="outline-container-orgc122bb5" class="outline-3">
+<h3 id="orgc122bb5"><span class="section-number-3">1.12</span> Step 8. Give the balls more data</h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+class Ball{<br />
+  int x;<br />
+  int y;<br />
+  int size;<br />
+  int xspeed;<br />
+  int yspeed;<br />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org3c31aee" class="outline-3">
+<h3 id="org3c31aee"><span class="section-number-3">1.13</span> step 9. Give the balls another function they can perform and add speed to constructor</h3>
+<div class="outline-text-3" id="text-1-13">
+</div>
+<div id="outline-container-orgc2578bc" class="outline-4">
+<h4 id="orgc2578bc"><span class="section-number-4">1.13.1</span> makes sure to give each ball a speed variable in the "new ball" part of setup();</h4>
+<div class="outline-text-4" id="text-1-13-1">
+<p>
+class Ball{<br />
+  int x;<br />
+  int y;<br />
+  int size;<br />
+</p>
+
+<p>
+Ball(int x, int y, int size, int xspeed){<br />
+  this.x = x;<br />
+  this.y = y;<br />
+  this.size = size;<br />
+  this.xspeed = xspeed;<br />
+}<br />
+</p>
+
+<p>
+void display(){<br />
+  circle(x, y, size);<br />
+}<br />
+</p>
+
+<p>
+void move(){<br />
+  if(x &gt; width){<br />
+    xspeed = -xspeed;<br />
+  }<br />
+  if(x &lt; 0){<br />
+    xspeed = -xspeed;<br />
+  }<br />
+</p>
+
+<p>
+    x = x + xspeed;<br />
+}<br />
+</p>
+
+<p>
+void setup(){<br />
+  size(500,500);<br />
+  background(255);<br />
+  b1 = new Ball(70,70,70,1);<br />
+  b2 = new Ball(60,60,60,2);<br />
+  b3 = new Ball(50,50,50,3);<br />
+}<br />
+</p>
+
+<p>
+void draw(){<br />
+  b1.display();<br />
+  b1.move();<br />
+  b2.display();<br />
+  b2.move();<br />
+  b3.display();<br />
+  b3.move();<br />
+}<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfcd15ad" class="outline-3">
+<h3 id="orgfcd15ad"><span class="section-number-3">1.14</span> step 10. adding more functionality</h3>
+<div class="outline-text-3" id="text-1-14">
+<p>
+class Ball{<br />
+  int x;<br />
+  int y;<br />
+  int size;<br />
+  int xspeed;<br />
+  int yspeed;<br />
+</p>
+
+
+<p>
+Ball(int x, int y, int size, int xspeed, int yspeed){<br />
+  this.x = x;<br />
+  this.y = y;<br />
+  this.size = size;<br />
+  this.xspeed = xspeed;<br />
+  this.yspeed = yspeed;<br />
+}<br />
+</p>
+
+<p>
+void display(){<br />
+  circle(x, y, size);<br />
+}<br />
+</p>
+
+<p>
+void move(){<br />
+  if(x &gt; width){<br />
+    xspeed = -xspeed;<br />
+  }<br />
+  if(x &lt; 0){<br />
+    xspeed = -xspeed;<br />
+  }<br />
+  x = x + xspeed;<br />
+</p>
+
+<p>
+if(y &gt; height){<br />
+  yspeed = -yspeed;<br />
+}<br />
+</p>
+
+<p>
+if(y &lt; 0){<br />
+  yspeed = -yspeed;<br />
+}<br />
+</p>
+
+<p>
+y = y + yspeed;<br />
+</p>
+
+
+<p>
+  }<br />
+}<br />
+</p>
+
+<p>
+Ball b1;<br />
+Ball b2;<br />
+Ball b3;<br />
+</p>
+
+<p>
+void setup(){<br />
+  size(500,500);<br />
+  background(255);<br />
+  b1 = new Ball(0, 60, 100, 1, 5);<br />
+  b2 = new Ball(50, 120, 100, 1, 4);<br />
+  b3 = new Ball(100, 180, 100, 1, 3);<br />
+}<br />
+</p>
+
+<p>
+void draw(){<br />
+ b1.display();<br />
+ b1.move();<br />
+ b2.display();<br />
+ b2.move();<br />
+ b3.display();<br />
+ b3.move();<br />
+}<br />
+</p>
+</div>
+
+<div id="outline-container-org20d9a41" class="outline-4">
+<h4 id="org20d9a41"><span class="section-number-4">1.14.1</span> We now have a program that we can modify very easily by changing the variables in the</h4>
+</div>
+<div id="outline-container-org0c6be1e" class="outline-4">
+<h4 id="org0c6be1e"><span class="section-number-4">1.14.2</span> void setup() function. try and change speeds and sizes</h4>
+<div class="outline-text-4" id="text-1-14-2">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2019-12-08 Sun 09:59</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
