@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The HTML5 Herald</title>
+  </head>
+
+  <body>
+
+    <div id = "mainDiv"></div>
+    
+    <script>
+      //Make a div, give it an ID for CSS and give it some text!
+      let div1 = document.createElement("div");
+      div1.id = "div1";
+      div1.innerHTML = "This is div1.";
+
+      //Make another div with an ID and text
+      let div2 = document.createElement("div");
+      div2.id = "div2";
+      div2.innerHTML = "This is div2";
+
+      //put div2 inside div1
+      div1.appendChild(div2);
+
+      //make a variable of the mainDiv
+      let mainDiv= document.getElementById("mainDiv");
+      mainDiv.innerHTML = "This is main div";
+
+      //Put div1 into mainDiv
+      mainDiv.appendChild(div1);
+      
+    </script>
+
+    
+    <style>
+      #mainDiv{
+	  background-color: yellow;
+      }
+
+      #div1{
+	  background-color: green;
+      }
+
+      #div2{
+	  background-color: red;
+      }
+    </style>
+  </body>
+</html>
